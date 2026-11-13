@@ -1,14 +1,12 @@
 # ==========================================
-# INDEXACIÓN JUSTA: TS y JAVA VISIBLES
+# INDEXACIÓN EQUILIBRADA Y ORGÁNICA
 # ==========================================
 *.java linguist-detectable=true
 *.ts linguist-detectable=true
 *.tsx linguist-detectable=true
 
-# Ignorar componentes UI de terceros (Shadcn, etc.)
-frontend/src/components/ui/** linguist-vendored
-frontend/components/** linguist-vendored
-
-# Archivos generados y dependencias
+# Ignorar solo dependencias autogeneradas (sin ocultar UI)
 package-lock.json linguist-generated
+frontend/package-lock.json linguist-generated
+*.map linguist-generated
 *.json linguist-generated
